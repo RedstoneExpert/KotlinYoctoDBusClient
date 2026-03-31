@@ -11,7 +11,7 @@ interface Calculator : DBusInterface {
 }
 
 fun main() {
-    val connection = DBusConnectionBuilder.forSessionBus().build()
+    val connection = DBusConnectionBuilder.forSystemBus().build()
 
     val calc = connection.getRemoteObject(
         "org.example.CalculatorService",
